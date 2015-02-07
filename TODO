@@ -1,6 +1,15 @@
 1. use chef to install docker
 
 Commands:
-
-sudo su
-yum update -y
+```
+$ sudo su
+# apt-get update
+# locale-gen UTF-8
+# uname -a
+# ls -l /sys/class/misc/device-mapper
+# sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list"
+# curl -s https://get.docker.io/gpg | apt-key add -
+# apt-get update
+# apt-get install lxc-docker -y
+# docker info
+```
