@@ -1,0 +1,6 @@
+1. use chef to install docker
+
+Commands:
+
+sudo su
+yum update -y
