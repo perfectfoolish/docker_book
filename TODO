@@ -5,11 +5,33 @@ Commands:
 $ sudo su
 # apt-get update
 # locale-gen UTF-8
+
+Check the kernel version
 # uname -a
+
+Check the Device Mapper
 # ls -l /sys/class/misc/device-mapper
+lrwxrwxrwx 1 root root 0 May 16 01:38 /sys/class/misc/device-mapper -> ../../devices/virtual/misc/device-mapper
+# grep device-mapper /proc/devices
+
+# modprobe dm_mod
+
+Install docker
 # sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list"
 # curl -s https://get.docker.io/gpg | apt-key add -
 # apt-get update
 # apt-get install lxc-docker -y
+
+
 # docker info
+```
+vim /etc/default/ufw
+```
+DEFAULT_FORWARD_POLICY="DROP"
+```
+```
+DEFAULT_FORWARD_POLICY="ACCEPT"
+```
+```
+# ufw reload
 ```
